@@ -8,3 +8,7 @@ export enum PhoneTypeEnum {
   RESIDENCIAL = 'Residencial ',
   WHATSAPP = 'Whatsapp',
 }
+export enum StatusEnum {
+  ATIVO = 'Ativo',
+  INATIVO = 'Inativo',
+}
