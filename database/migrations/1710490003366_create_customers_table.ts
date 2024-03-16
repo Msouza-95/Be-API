@@ -13,7 +13,7 @@ export default class extends BaseSchema {
       table.enu('gender', Object.values(GenderEnum)).notNullable()
 
       table.timestamp('created_at')
-      table.timestamp('updated_at')
+      table.timestamp('updated_at').nullable()
     })
   }
 

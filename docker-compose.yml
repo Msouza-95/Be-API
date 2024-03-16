@@ -6,9 +6,10 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: 'be'
-      MYSQL_USER: 'root'
-      MYSQL_PASSWORD: 'password'
+      MYSQL_USER: 'be'
+      MYSQL_PASSWORD: 'be'
       MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     ports:
       - '3306:3306'
     expose:

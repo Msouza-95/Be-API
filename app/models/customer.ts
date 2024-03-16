@@ -10,7 +10,7 @@ export default class Customer extends BaseModel {
   declare email: string
 
   @column()
-  declare phone: string
+  declare cpf: string
 
   @column()
   declare gender: GenderEnum
