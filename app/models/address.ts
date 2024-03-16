@@ -20,7 +20,7 @@ export default class Address extends BaseModel {
   declare country: string
 
   @column()
-  declare zip_code:
+  declare zip_code: string
 
   @hasMany(() => Customer)
   declare phones: HasMany<typeof Customer>
