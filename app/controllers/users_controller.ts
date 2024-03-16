@@ -16,6 +16,6 @@ export default class UsersController {
 
     const res = await this.createUserService.execute({ email, password, full_name: name })
 
-    response.status(200).json(res)
+    response.status(201).json(res)
   }
 }

@@ -28,6 +28,13 @@ class CustomerRepository implements ICustomerRepository {
 
     return customer
   }
+
+  async delete(id: number): Promise<void> {
+    const customer = await Customer.find(id)
+
+    await customer?.delete()
+    return
+  }
 }
 
 export default CustomerRepository
