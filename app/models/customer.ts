@@ -1,10 +1,13 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column } from '@adonisjs/lucid/orm'
-import { GenderEnum } from '../contracts/enums.js'
+import { GenderEnum } from '../contracts/enum/enums.js'
 
 export default class Customer extends BaseModel {
   @column({ isPrimary: true })
   declare id: number
+
+  @column()
+  declare full_name: string
 
   @column()
   declare email: string
