@@ -14,7 +14,7 @@ export default class extends BaseSchema {
       table.integer('product_id').unsigned().references('products.id').onDelete('CASCADE')
 
       table.timestamp('created_at')
-      table.timestamp('updated_at')
+      table.timestamp('updated_at').nullable()
     })
   }
 

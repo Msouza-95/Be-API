@@ -26,9 +26,6 @@ export default class Sale extends BaseModel {
   @hasMany(() => Product)
   declare products: relations.HasMany<typeof Product>
 
-  Customer
-  Product
-
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 
