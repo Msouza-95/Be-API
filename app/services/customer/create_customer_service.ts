@@ -1,9 +1,9 @@
 import { inject } from '@adonisjs/core'
 
 import { Exception } from '@adonisjs/core/exceptions'
-import { CreateCustomerDTO } from '../contracts/dto/customer_dto.js'
-import CustomerRepository from '../repositories/customer_repository.js'
 import Customer from '#models/customer'
+import CustomerRepository from '../../repositories/customer_repository.js'
+import { CreateCustomerDTO } from '../../contracts/dto/customer_dto.js'
 
 @inject()
 export default class CreateCustomerService {

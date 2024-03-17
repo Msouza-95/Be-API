@@ -35,6 +35,11 @@ class CustomerRepository implements ICustomerRepository {
     await customer?.delete()
     return
   }
+
+  async findAll(): Promise<Customer[]> {
+    const customers = await Customer.all()
+    return customers
+  }
 }
 
 export default CustomerRepository

@@ -12,3 +12,8 @@ export enum StatusEnum {
   ATIVO = 'Ativo',
   INATIVO = 'Inativo',
 }
+
+export enum OptRequestEnum {
+  INDEX = 'index',
+  SHOW = 'show',
+}

@@ -1,4 +1,4 @@
-import CreateUserService from '#services/create_user_service'
+import CreateUserService from '#services/user/create_user_service'
 import { createUserValidator } from '#validators/user'
 import { inject } from '@adonisjs/core'
 import type { HttpContext } from '@adonisjs/core/http'

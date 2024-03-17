@@ -9,4 +9,5 @@ export default interface ICustomerRepository {
   findById(id: number): Promise<Customer | null>
   save(data: UpdateCustomerDTO): Promise<Customer>
   delete(id: number): Promise<void>
+  findAll(): Promise<Customer[]>
 }

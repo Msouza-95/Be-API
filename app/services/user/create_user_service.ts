@@ -1,9 +1,9 @@
 import User from '#models/user'
 import { inject } from '@adonisjs/core'
 
-import CreateUserDTO from '../contracts/dto/user_dto.js'
-import UserRepository from '../repositories/user_repository.js'
 import { Exception } from '@adonisjs/core/exceptions'
+import CreateUserDTO from '../../contracts/dto/user_dto.js'
+import UserRepository from '../../repositories/user_repository.js'
 
 @inject()
 export default class CreateUserService {
