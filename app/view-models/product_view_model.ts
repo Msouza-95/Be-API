@@ -1,7 +1,16 @@
 import Product from '#models/product'
 
 export class ProductViewModel {
-  static toHTTP(product: Product) {
+  static toBasicHTTP(product: Product) {
+    return {
+      id: product.id,
+      nome: product.name,
+      description: product.description,
+      price: product.price,
+    }
+  }
+
+  static tofullHTTP(product: Product) {
     return {
       id: product.id,
       nome: product.name,

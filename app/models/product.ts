@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column } from '@adonisjs/lucid/orm'
-import { StatusEnum } from '../contracts/enums.js'
+import { StatusEnum } from '../contracts/enum/enums.js'
 
 export default class Product extends BaseModel {
   @column({ isPrimary: true })

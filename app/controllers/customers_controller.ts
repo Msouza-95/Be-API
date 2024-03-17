@@ -45,7 +45,7 @@ export default class CustomersController {
 
     const { email, name, cpf, gender } = data
 
-    const res = await this.updateCustomerService.execute({
+    const customer = await this.updateCustomerService.execute({
       email,
       cpf,
       gender,
@@ -53,7 +53,7 @@ export default class CustomersController {
       id,
     })
 
-    response.status(200).json(res)
+    response.status(200).json({ customer: CustomerViewModel.tofullHTTP(customer) })
   }
 
   async destroy({ request, response }: HttpContext) {
@@ -67,13 +67,13 @@ export default class CustomersController {
   async index({ response }: HttpContext) {
     const customers = await this.indexCustomerService.execute()
 
-    response.status(200).json({ customers: customers.map(CustomerViewModel.toHTTP) })
+    response.status(200).json({ customers: customers.map(CustomerViewModel.toBasicHTTP) })
   }
 
   async show({ request, response }: HttpContext) {
     const { id } = request.params()
     const customer = await this.showCustomerService.execute(id)
 
-    response.status(200).json({ customer: CustomerViewModel.toHTTP(customer) })
+    response.status(200).json({ customer: CustomerViewModel.tofullHTTP(customer) })
   }
 }
