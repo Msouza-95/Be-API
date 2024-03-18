@@ -6,13 +6,13 @@ Be consiste em estruturar uma API RESTful conectada a um banco de dados.
 Trata-se de um sistema que permite cadastrar usuários externos. Ao realizarem login, estes usuários deverão poder registrar clientes, produtos e vendas.
 
 
-``` 
+
 
 ## Rotas do sistema que foram feitas 
 
 
-[X] O sistema deve contar com rotas para:
-[X] cadastro de usuário do sistema (signup);
+- [X] O sistema deve contar com rotas para:
+- [X] cadastro de usuário do sistema (signup);
 [X] login com JWT de usuário cadastrado (login);
 clientes:
 listar todos os clientes cadastrados (index)
