@@ -8,16 +8,13 @@ Trata-se de um sistema que permite cadastrar usuários externos. Ao realizarem l
 
 ## Installation
 
-### criar na raiz do projeto um arquivo de nome ".env" e compiar os dados que estão no aquivo  ".env.example"
+### Criar na raiz do projeto um arquivo de nome ".env" e compiar os dados que estão no aquivo  ".env.example"
 
-### O banco de dados foi feito em docker.
-### Utilizar o seguinte comando na pasta raiz do projeto:  
+### O banco de dados foi feito em docker. Utilizar o seguinte comando na pasta raiz do projeto:  
 
 ```bash
 $ docker-compose up -d
 ```
-
-## Running the app
 
 ### Executar a Api:
 
@@ -29,9 +26,9 @@ $ npm run dev
 ```bash
 $ yarn dev
 ```
-## forma de testar as rotas
+## Forma de testar as rotas
 
-### disponibilizei na pasta Insomnia desse projeto, o arquivo do insomina do projeto já configurando, basta apenas importar o arquivo.
+### Disponibilizei na pasta Insomnia desse projeto, o arquivo do insomina do projeto já configurando, basta apenas importar o arquivo.
 
 [Insomina](https://github.com/Msouza-95/Be-API/tree/master/Insomnia) 
 
@@ -41,7 +38,7 @@ $ yarn dev
 - [X] cadastro de usuário do sistema (signup);
 - [X] login com JWT de usuário cadastrado (login);
       
-### clientes
+### Clientes
 - [X] listar todos os clientes cadastrados (index)
 - [X] apenas dados principais devem vir aqui;
 - [X] ordenar pelo id;
@@ -52,7 +49,7 @@ $ yarn dev
 - [X] editar um(a) cliente (update);
 - [X]  excluir um(a) cliente e vendas a ele(a) (delete);
 
-### produtos:
+### Produtos:
 - [X] listar todos os produtos cadastrados (index):
 - [X] apenas dados principais devem vir aqui;
 - [X] ordenar alfabeticamente.
@@ -61,12 +58,12 @@ $ yarn dev
 - [X] editar um produto (update);
 - [X] exclusão lógica ("soft delete") de um produto (delete);
 
-### vendas:
+### Vendas:
 
 - [X] registrar venda de 1 produto a 1 cliente (store).
 - [ ] Observação: as rotas em clientes, produtos e vendas só devem poder ser acessadas por usuário logado.
 
-### dificuldades encontradas.
+### Dificuldades encontradas.
 
 No processo de desenvolvimento, enfrentei desafios significativos ao implementar o recurso de autenticação. Uma das principais dificuldades foi o prazo limitado para aprender um novo framework em apenas uma semana e, infelizmente, a forma como implementei não foi bem-sucedida em fazer o recurso funcionar como esperado.
 
