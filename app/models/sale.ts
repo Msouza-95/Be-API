@@ -20,6 +20,12 @@ export default class Sale extends BaseModel {
   @column()
   declare date_time: Date
 
+  @column()
+  declare customer_id: number
+
+  @column()
+  declare product_id: number
+
   @hasMany(() => Customer)
   declare customers: relations.HasMany<typeof Customer>
 

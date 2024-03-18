@@ -1,8 +1,6 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column, hasMany } from '@adonisjs/lucid/orm'
-import { PhoneTypeEnum } from '../contracts/enums.js'
-import Customer from './customer.js'
-import * as relations from '@adonisjs/lucid/types/relations'
+import { BaseModel, column } from '@adonisjs/lucid/orm'
+import { PhoneTypeEnum } from '../contracts/enum/enums.js'
 
 export default class Phone extends BaseModel {
   @column({ isPrimary: true })
@@ -14,8 +12,8 @@ export default class Phone extends BaseModel {
   @column()
   declare phone_type: PhoneTypeEnum
 
-  @hasMany(() => Customer)
-  declare phones: relations.HasMany<typeof Customer>
+  @column()
+  declare customer_id: number
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

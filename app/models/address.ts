@@ -22,6 +22,9 @@ export default class Address extends BaseModel {
   @column()
   declare zip_code: string
 
+  @column()
+  declare customer_id: number
+
   @hasMany(() => Customer)
   declare phones: HasMany<typeof Customer>
 
