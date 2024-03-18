@@ -4,8 +4,8 @@ export enum GenderEnum {
 }
 
 export enum PhoneTypeEnum {
-  CELULAR = 'Celular ',
-  RESIDENCIAL = 'Residencial ',
+  CELULAR = 'Celular',
+  RESIDENCIAL = 'Residencial',
   WHATSAPP = 'Whatsapp',
 }
 export enum StatusEnum {
