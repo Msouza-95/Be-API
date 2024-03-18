@@ -11,7 +11,11 @@ export default class IndexProductService {
     const products = await this.productRepository.findAll()
 
     // ordernar pelo id
-    products.sort((a, b) => (a.name < b.name ? -1 : 1))
+    products.sort((x, y) => {
+      let a = x.name.toUpperCase()
+      let b = y.name.toUpperCase()
+      return a < b ? -1 : 1
+    })
 
     return products
   }
