@@ -21,6 +21,9 @@ class CustomerRepository implements ICustomerRepository {
   async findById(id: number): Promise<Customer | null> {
     const findCustomer = await Customer.findBy('id', id)
 
+    await findCustomer?.load('phones')
+    await findCustomer?.load('addresses')
+    await findCustomer?.load('sales')
     return findCustomer
   }
   async save(customer: Customer): Promise<Customer> {

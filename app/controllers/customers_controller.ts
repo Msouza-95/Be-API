@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { createCustomerValidator } from '#validators/custumer'
 import { inject } from '@adonisjs/core'
 
@@ -25,16 +26,35 @@ export default class CustomersController {
 
     await createCustomerValidator.validate(data)
 
-    const { email, name, cpf, gender } = data
+    const {
+      email,
+      name,
+      cpf,
+      gender,
+      phone_number,
+      phone_type,
+      address,
+      city,
+      state,
+      country,
+      zip_code,
+    } = data
 
-    const res = await this.createCustomerService.execute({
+    const newCustomer = await this.createCustomerService.execute({
       email,
       cpf,
       gender,
       full_name: name,
+      phone_number,
+      phone_type,
+      address,
+      city,
+      state,
+      country,
+      zip_code,
     })
 
-    response.status(201).json(res)
+    response.status(201).json(newCustomer)
   }
   async update({ request, response }: HttpContext) {
     const { id } = request.params()
@@ -43,7 +63,19 @@ export default class CustomersController {
 
     await createCustomerValidator.validate(data)
 
-    const { email, name, cpf, gender } = data
+    const {
+      email,
+      name,
+      cpf,
+      gender,
+      phone_number,
+      phone_type,
+      address,
+      city,
+      state,
+      country,
+      zip_code,
+    } = data
 
     const customer = await this.updateCustomerService.execute({
       email,
@@ -51,9 +83,16 @@ export default class CustomersController {
       gender,
       full_name: name,
       id,
+      phone_number,
+      phone_type,
+      address,
+      city,
+      state,
+      country,
+      zip_code,
     })
 
-    response.status(200).json({ customer: CustomerViewModel.tofullHTTP(customer) })
+    response.status(200).json({ customer: customer })
   }
 
   async destroy({ request, response }: HttpContext) {
@@ -72,8 +111,10 @@ export default class CustomersController {
 
   async show({ request, response }: HttpContext) {
     const { id } = request.params()
-    const customer = await this.showCustomerService.execute(id)
+    const { month, year } = request.qs()
 
-    response.status(200).json({ customer: CustomerViewModel.tofullHTTP(customer) })
+    const customer = await this.showCustomerService.execute({ customer_id: id, month, year })
+
+    response.status(200).json({ customer: customer })
   }
 }
