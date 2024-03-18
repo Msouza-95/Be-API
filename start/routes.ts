@@ -12,6 +12,7 @@ const CustomersController = () => import('#controllers/customers_controller')
 const ProductsController = () => import('#controllers/products_controller')
 
 const SalesController = () => import('#controllers/sales_controller')
+
 import router from '@adonisjs/core/services/router'
 
 router.get('/', async () => {
@@ -22,6 +23,7 @@ router.get('/', async () => {
 
 //user
 router.resource('/signup', UsersController).apiOnly()
+router.post('/login', [UsersController, 'login'])
 
 //customers
 router.resource('/customer', CustomersController).apiOnly()
