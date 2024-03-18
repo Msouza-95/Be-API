@@ -28,7 +28,7 @@ $ yarn dev
 ```
 ## Forma de testar as rotas
 
--- Disponibilizei na pasta Insomnia desse projeto, o arquivo do insomina do projeto já configurando, basta apenas importar o arquivo.
+- Disponibilizei na pasta Insomnia desse projeto, o arquivo do insomina do projeto já configurando, basta apenas importar o arquivo.
 
 [Insomina](https://github.com/Msouza-95/Be-API/tree/master/Insomnia) - Link
 
