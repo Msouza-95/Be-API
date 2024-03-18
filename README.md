@@ -8,9 +8,9 @@ Trata-se de um sistema que permite cadastrar usuários externos. Ao realizarem l
 
 ## Installation
 
-### Criar na raiz do projeto um arquivo de nome ".env" e compiar os dados que estão no aquivo  ".env.example"
+- Criar na raiz do projeto um arquivo de nome ".env" e compiar os dados que estão no aquivo  ".env.example"
 
-### O banco de dados foi feito em docker. Utilizar o seguinte comando na pasta raiz do projeto:  
+- O banco de dados foi feito em docker. Utilizar o seguinte comando na pasta raiz do projeto:  
 
 ```bash
 $ docker-compose up -d
@@ -28,9 +28,9 @@ $ yarn dev
 ```
 ## Forma de testar as rotas
 
-### Disponibilizei na pasta Insomnia desse projeto, o arquivo do insomina do projeto já configurando, basta apenas importar o arquivo.
+-- Disponibilizei na pasta Insomnia desse projeto, o arquivo do insomina do projeto já configurando, basta apenas importar o arquivo.
 
-[Insomina](https://github.com/Msouza-95/Be-API/tree/master/Insomnia) 
+[Insomina](https://github.com/Msouza-95/Be-API/tree/master/Insomnia) - Link
 
 ## Rotas do sistema que foram feitas 
 
