@@ -63,11 +63,7 @@ $ yarn dev
 - [X] registrar venda de 1 produto a 1 cliente (store).
 - [ ] Observação: as rotas em clientes, produtos e vendas só devem poder ser acessadas por usuário logado.
 
-### Dificuldades encontradas.
 
-No processo de desenvolvimento, enfrentei desafios significativos ao implementar o recurso de autenticação. Uma das principais dificuldades foi o prazo limitado para aprender um novo framework em apenas uma semana e, infelizmente, a forma como implementei não foi bem-sucedida em fazer o recurso funcionar como esperado.
-
-Embora eu tenha me esforçado ao máximo para dominar o framework no tempo disponível, reconheço que houve lacunas no meu conhecimento e na minha compreensão da implementação. No entanto, encarei essa situação como uma oportunidade de aprendizado e busquei compreender onde cometi erros e como posso melhorar no futuro
 
 
 ## License
